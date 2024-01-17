@@ -1,0 +1,15 @@
+inputSet:
+  name: comment
+  identifier: comment
+  orgIdentifier: default
+  projectIdentifier: test
+  pipeline:
+    identifier: Build_olafmol_ghapp_clean_trigger_test_1705496265396
+    properties:
+      ci:
+        codebase:
+          build:
+            type: tag
+            spec:
+              tag: <+trigger.tag>
+  object Object: pipeline.properties.ci.codebase
