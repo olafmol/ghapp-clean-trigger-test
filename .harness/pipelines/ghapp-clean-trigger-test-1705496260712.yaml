@@ -1,0 +1,33 @@
+pipeline:
+  identifier: Build_olafmol_ghapp_clean_trigger_test_1705496265396
+  name: Build ghapp-clean-trigger-test
+  orgIdentifier: default
+  projectIdentifier: test
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github_OAuth_1705496245149
+        repoName: olafmol/ghapp-clean-trigger-test
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
